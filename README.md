@@ -30,7 +30,7 @@ implementation 'com.dpkgsoft:mojang:1.0@jar'
 ```
 
 ### Usage
-You can read how to use our library in the [wiki](https://dpkgsoft.com)
+You can read how to use our library in the [wiki](https://github.com/dpkgsoft/mojang/wiki)
 
 ### Contributing
 I know that some code is very bad. You can contribute to project and I'll put
