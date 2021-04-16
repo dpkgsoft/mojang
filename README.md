@@ -24,10 +24,6 @@ You can install MojangAPI via Maven:
     </dependency>
 </dependencies>
 ```
-Or via Gradle:
-```
-implementation 'com.dpkgsoft:mojang:(version)@jar'
-```
 
 ### Usage
 You can read how to use our library in the [wiki](https://github.com/dpkgsoft/mojang/wiki)
