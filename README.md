@@ -20,13 +20,13 @@ You can install MojangAPI via Maven:
     <dependency>
         <groupId>com.dpkgsoft</groupId>
         <artifactId>mojang</artifactId>
-        <version>1.0</version>
+        <version>(version)</version>
     </dependency>
 </dependencies>
 ```
 Or via Gradle:
 ```
-implementation 'com.dpkgsoft:mojang:1.0@jar'
+implementation 'com.dpkgsoft:mojang:(version)@jar'
 ```
 
 ### Usage
