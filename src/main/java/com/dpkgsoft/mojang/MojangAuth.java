@@ -88,7 +88,7 @@ public class MojangAuth {
         requestJson.put("username", login)
                 .put("password", password);
         try {
-            String data = Utils.postJson(API_ENDPOINT + "/invalidate", requestJson.toString());
+            String data = Utils.postJson(API_ENDPOINT + "/signout", requestJson.toString());
             return data.equalsIgnoreCase("");
         } catch (IOException e) {
             return false;
