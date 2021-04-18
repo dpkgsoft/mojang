@@ -115,7 +115,9 @@ public class MojangAPI {
     public static TexturesRequest getTextures(String uuid) throws APIException {
         try {
             String data = Utils.get(SESSION_ENDPOINT + "session/minecraft/profile/" + uuid + "?unsigned=false");
-            if (data.equalsIgnoreCase("")) throw new APIException("User not found", 404);
+            if (new JSONObject(data).has("error")) {
+                throw new APIException(400);
+            }
             JSONObject json = new JSONObject(new String(Base64.decode(new JSONObject(data).getJSONArray("properties").getJSONObject(0).getString("value"))));
             TexturesRequest texture = new TexturesRequest();
             texture.setSignature(new JSONObject(data).getJSONArray("properties").getJSONObject(0).getString("signature"));
