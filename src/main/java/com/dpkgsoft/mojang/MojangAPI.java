@@ -112,6 +112,19 @@ public class MojangAPI {
         }
     }
 
+    public static Profile getProfileByUuid(String uuid) throws APIException {
+        try {
+            String data = Utils.get(SESSION_ENDPOINT + "session/minecraft/profile/" + uuid);
+            if (new JSONObject(data).has("error")) {
+                throw new APIException(400);
+            }
+            JSONObject json = new JSONObject(data);
+            return new Profile(json.getString("id"), json.getString("name"));
+        } catch (IOException e) {
+            throw new APIException(e.getMessage(), 1);
+        }
+    }
+
     public static TexturesRequest getTextures(String uuid) throws APIException {
         try {
             String data = Utils.get(SESSION_ENDPOINT + "session/minecraft/profile/" + uuid + "?unsigned=false");
