@@ -4,18 +4,10 @@
 ![](https://img.shields.io/github/forks/dpkgsoft/mojang.svg)
 ![](https://img.shields.io/github/issues/dpkgsoft/mojang.svg)
 ![](https://ci.dpkgsoft.com/job/MojangAPI/badge/icon)
-![](https://img.shields.io/maven-metadata/v?metadataUrl=https%3A%2F%2Fmvn.dpkgsoft.com%2Frepository%2Freleases%2Fcom%2Fdpkgsoft%2Fmojang%2Fmaven-metadata.xml)
+![](https://img.shields.io/maven-central/v/com.dpkgsoft/mojang?label=Maven)
 
 ### Installing
-You can install MojangAPI via Maven:
-```xml
-<repositories>
-    <repository>
-        <id>dpkgsoft</id>
-        <url>https://mvn.dpkgsoft.com/repository/releases/</url>
-    </repository>
-</repositories>
-```
+You can install MojangAPI via Maven, simply add this into your pom.xml:
 ```xml
 <dependencies>
     <dependency>
